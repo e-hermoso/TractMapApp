@@ -22,7 +22,7 @@ export class TractMapComponent extends Component
     }
     onTractMapUpdate(id) {
         const { history } = this.props;
-        history.push('/updateTract/' + id);
+        history.push('/UpdateTractMap/' + id);
     }
     onTractMapDelete(id) {
         const { history } = this.props;
@@ -31,7 +31,7 @@ export class TractMapComponent extends Component
     populateTractMap()
     {
         // Send a request to our API endpoint using a library called "axios" : npm install axios --save
-        axios.get("api/TractMap/GetTracts").then(result => {
+        axios.get("api/TractMaps/GetTractMaps").then(result => {
             const response = result.data;
             this.setState({ tracts: response, loading: false, failed: false, error:""});
         }).catch(error => {

@@ -18,7 +18,7 @@ export class Delete extends Component {
 
     componentDidMount() {
         const { id } = this.props.match.params;
-        axios.get("api/TractMap/SingleTract/" + id).then(tract => {
+        axios.get("api/TractMaps/SingleTract/" + id).then(tract => {
             const response = tract.data;
 
             this.setState({
@@ -37,7 +37,7 @@ export class Delete extends Component {
         const { id } = this.props.match.params;
         const { history } = this.props;
 
-        axios.delete("api/TractMap/DeleteTract/" + id).then(result => {
+        axios.delete("api/TractMaps/DeleteTractMap/" + id).then(result => {
             history.push('/TractMap')
         })
     }

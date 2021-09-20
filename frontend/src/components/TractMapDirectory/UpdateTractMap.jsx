@@ -23,7 +23,7 @@ export class UpdateTractMapComponent extends Component {
 
     componentDidMount() {
         const { id } = this.props.match.params;
-        axios.get("api/TractMap/SingleTract/" + id).then(tract => {
+        axios.get("api/TractMaps/SingleTractMap/" + id).then(tract => {
             const response = tract.data;
 
             this.setState({
@@ -58,7 +58,7 @@ export class UpdateTractMapComponent extends Component {
     }
     onUpdateCancel() {
         const { history } = this.props;
-        history.push('/GetTracts')
+        history.push('/GetTractMaps')
     }
     onSubmit(e) {
         e.preventDefault();
@@ -72,7 +72,7 @@ export class UpdateTractMapComponent extends Component {
             dateCompleted: this.state.dateCompleted ? new Date(this.state.dateCompleted).toISOString() : null
         }
 
-        axios.put("api/TractMap/UpdateTrip/" + id, tractmapObj).then(result => {
+        axios.put("api/TractMaps/UpdateTractMap/" + id, tractmapObj).then(result => {
             history.push('/TractMap')
         })
     }

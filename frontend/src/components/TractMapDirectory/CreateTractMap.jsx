@@ -53,8 +53,8 @@ export class CreateNewTractMapComponent extends Component {
             dateCompleted: this.state.dateCompleted
         }
 
-        axios.post("api/TractMap/AddTract", tractmapObj).then(result => {
-            history.push('/TractMap')
+        axios.post("api/TractMaps/AddTract", tractmapObj).then(result => {
+            history.push('/TractMaps')
         })
     }
 
