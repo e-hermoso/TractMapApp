@@ -19,7 +19,7 @@ export default class App extends Component {
         <Layout>
             <Route exact path='/' component={Home} />
             <Route path='/create' component={CreateNewTractMapComponent}/>
-            <Route path='/TractMap' component={TractMapComponent} />
+            <Route path='/NavTractMap' component={TractMapComponent} />
             <Route path='/updateTract/:id' component={UpdateTractMapComponent} />
             <Route path='/delete/:id' component={Delete}/>
       </Layout>

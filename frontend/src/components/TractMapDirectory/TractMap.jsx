@@ -22,7 +22,7 @@ export class TractMapComponent extends Component
     }
     onTractMapUpdate(id) {
         const { history } = this.props;
-        history.push('/UpdateTractMap/' + id);
+        history.push('/updateTract/' + id);
     }
     onTractMapDelete(id) {
         const { history } = this.props;
@@ -55,7 +55,7 @@ export class TractMapComponent extends Component
                     {
                         tracts.map(tract => (
                             <tr key={tract.id}>
-                                <td>{tract.name}</td>
+                                <td>{tract.tractName}</td>
                                 <td>{tract.description}</td>
                                 <td>{new Date(tract.dateStarted).toISOString().slice(0, 10)}</td>
                                 <td>{tract.dateCompleted ? new Date(tract.dateCompleted).toISOString().slice(0, 10) : '-'}</td>

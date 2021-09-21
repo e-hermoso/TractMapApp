@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\OCPWHermosoE\\source\\sample-NetCore-React\\TractMapApp\\backend\\SurveyingAndMaping\\SurveyingAndMaping.csproj": {}
+    "C:\\Users\\erich\\nova-waves\\erich-sample-prj\\TractMapApp\\backend\\SurveyingAndMaping\\SurveyingAndMaping.csproj": {}
   },
   "projects": {
-    "C:\\Users\\OCPWHermosoE\\source\\sample-NetCore-React\\TractMapApp\\backend\\SurveyingAndMaping\\SurveyingAndMaping.csproj": {
+    "C:\\Users\\erich\\nova-waves\\erich-sample-prj\\TractMapApp\\backend\\SurveyingAndMaping\\SurveyingAndMaping.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\OCPWHermosoE\\source\\sample-NetCore-React\\TractMapApp\\backend\\SurveyingAndMaping\\SurveyingAndMaping.csproj",
+        "projectUniqueName": "C:\\Users\\erich\\nova-waves\\erich-sample-prj\\TractMapApp\\backend\\SurveyingAndMaping\\SurveyingAndMaping.csproj",
         "projectName": "SurveyingAndMaping",
-        "projectPath": "C:\\Users\\OCPWHermosoE\\source\\sample-NetCore-React\\TractMapApp\\backend\\SurveyingAndMaping\\SurveyingAndMaping.csproj",
-        "packagesPath": "C:\\Users\\OCPWHermosoE\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\OCPWHermosoE\\source\\sample-NetCore-React\\TractMapApp\\backend\\SurveyingAndMaping\\obj\\",
+        "projectPath": "C:\\Users\\erich\\nova-waves\\erich-sample-prj\\TractMapApp\\backend\\SurveyingAndMaping\\SurveyingAndMaping.csproj",
+        "packagesPath": "C:\\Users\\erich\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\erich\\nova-waves\\erich-sample-prj\\TractMapApp\\backend\\SurveyingAndMaping\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\OCPWHermosoE\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\erich\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -26,7 +26,6 @@
         },
         "frameworks": {
           "netcoreapp3.1": {
-            "targetAlias": "netcoreapp3.1",
             "projectReferences": {}
           }
         },
@@ -38,7 +37,6 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
-          "targetAlias": "netcoreapp3.1",
           "imports": [
             "net461",
             "net462",
@@ -57,7 +55,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
         }
       }
     }

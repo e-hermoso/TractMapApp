@@ -14,7 +14,7 @@ export class UpdateTractMapComponent extends Component {
         this.onUpdateCancel = this.onUpdateCancel.bind(this);
 
         this.state = {
-            name: '',
+            tractName: '',
             description: '',
             dateStarted: null,
             dateCompleted: null
@@ -27,7 +27,7 @@ export class UpdateTractMapComponent extends Component {
             const response = tract.data;
 
             this.setState({
-                name: response.name,
+                tractName: response.tractName,
                 description: response.description,
                 dateStarted: new Date(response.dateStarted).toISOString().slice(0, 10),
                 dateCompleted: response.dateCompleted ? new Date(response.dateCompleted).toISOString().slice(0,10) : null
@@ -37,7 +37,7 @@ export class UpdateTractMapComponent extends Component {
      
     onChangeName(e) {
         this.setState({
-            name: e.target.value
+            tractName: e.target.value
         });
     }
 
@@ -58,7 +58,7 @@ export class UpdateTractMapComponent extends Component {
     }
     onUpdateCancel() {
         const { history } = this.props;
-        history.push('/GetTractMaps')
+        history.push('/NavTractMap')
     }
     onSubmit(e) {
         e.preventDefault();
@@ -66,14 +66,14 @@ export class UpdateTractMapComponent extends Component {
         const { id } = this.props.match.params;
 
         let tractmapObj = {
-            name: this.state.name,
+            tractName: this.state.tractName,
             description: this.state.description,
             dateStarted: new Date(this.state.dateStarted).toISOString(),
             dateCompleted: this.state.dateCompleted ? new Date(this.state.dateCompleted).toISOString() : null
         }
 
         axios.put("api/TractMaps/UpdateTractMap/" + id, tractmapObj).then(result => {
-            history.push('/TractMap')
+            history.push('/NavTractMap')
         })
     }
 
@@ -87,7 +87,7 @@ export class UpdateTractMapComponent extends Component {
                         <input
                             type="text"
                             className="form-control"
-                            value={this.state.name}
+                            value={this.state.tractName}
                             // Add on change event : when a user change the value of the input field that value is reflected to our state
                             onChange={this.onChangeName}
                         />

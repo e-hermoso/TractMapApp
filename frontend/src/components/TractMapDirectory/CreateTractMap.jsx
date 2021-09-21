@@ -13,7 +13,7 @@ export class CreateNewTractMapComponent extends Component {
         this.onSubmit = this.onSubmit.bind(this)
 
         this.state = {
-            name: '',
+            tractName: '',
             description: '',
             dateStarted: null,
             dateCompleted: null
@@ -22,7 +22,7 @@ export class CreateNewTractMapComponent extends Component {
 
     onChangeName(e) {
         this.setState({
-            name: e.target.value
+            tractName: e.target.value
         });
     }
 
@@ -47,14 +47,14 @@ export class CreateNewTractMapComponent extends Component {
 
         let tractmapObj = {
             Id: Math.floor(Math.random() * 1000),
-            name: this.state.name,
+            tractName: this.state.tractName,
             description: this.state.description,
             dateStarted: this.dateStarted,
             dateCompleted: this.state.dateCompleted
         }
 
-        axios.post("api/TractMaps/AddTract", tractmapObj).then(result => {
-            history.push('/TractMaps')
+        axios.post("api/TractMaps/AddTractMap", tractmapObj).then(result => {
+            history.push('/NavTractMap')
         })
     }
 
@@ -68,7 +68,7 @@ export class CreateNewTractMapComponent extends Component {
                         <input
                             type="text"
                             className="form-control"
-                            value={this.state.name}
+                            value={this.state.tractName}
                             // Add on change event : when a user change the value of the input field that value is reflected to our state
                             onChange={this.onChangeName}
                         />

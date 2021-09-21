@@ -33,19 +33,19 @@ namespace SurveyingAndMaping
             // CORS(Cross-Origin Resourse Sharing) is a mechanism that uses HTTP headers to tell a browser to let
             // a web application run at certain origins (domains) so that it has permission to access certain resources on a server
             // at a different origin
-            services.AddCors(options =>
-                options.AddPolicy("CorsPolicy", builder =>
-                builder.AllowAnyMethod()
-                .AllowAnyHeader()
-                .WithOrigins("http://localhost:3000") // Defines CORS policy that allows our frontend app hosted in the localhost:300 origin to access the backend.
-                .AllowCredentials()));
+            //services.AddCors(options =>
+            //    options.AddPolicy("CorsPolicy", builder =>
+            //    builder.AllowAnyMethod()
+            //    .AllowAnyHeader()
+            //    .WithOrigins("http://localhost:3000") // Defines CORS policy that allows our frontend app hosted in the localhost:300 origin to access the backend.
+            //    .AllowCredentials()));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             // Enable the use of this policy in the Configure method.
-            app.UseCors("CorsPolicy");
+            //app.UseCors("CorsPolicy");
 
             if (env.IsDevelopment())
             {

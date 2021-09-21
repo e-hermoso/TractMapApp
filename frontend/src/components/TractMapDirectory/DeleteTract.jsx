@@ -9,7 +9,7 @@ export class Delete extends Component {
         this.onConfirmation = this.onConfirmation.bind(this);
 
         this.state = {
-            name: "",
+            tractName: "",
             description: "",
             dateStarted: null,
             dateCompleted: null
@@ -18,11 +18,11 @@ export class Delete extends Component {
 
     componentDidMount() {
         const { id } = this.props.match.params;
-        axios.get("api/TractMaps/SingleTract/" + id).then(tract => {
+        axios.get("api/TractMaps/SingleTractMap/" + id).then(tract => {
             const response = tract.data;
 
             this.setState({
-                name: response.name,
+                tractName: response.tractName,
                 description: response.description,
                 dateStarted: new Date(response.dateStarted).toISOString().slice(0, 10),
                 dateCompleted: response.dateCompleted ? new Date(response.dateCompleted).toISOString().slice(0, 10) : null
@@ -31,14 +31,14 @@ export class Delete extends Component {
     }
     onCancel(e) {
         const { history } = this.props;
-        history.push('/TractMap');
+        history.push('/NavTractMap');
     }
     onConfirmation(e) {
         const { id } = this.props.match.params;
         const { history } = this.props;
 
         axios.delete("api/TractMaps/DeleteTractMap/" + id).then(result => {
-            history.push('/TractMap')
+            history.push('/NavTractMap')
         })
     }
     render() {
@@ -46,14 +46,14 @@ export class Delete extends Component {
             <div style={{ marginTop: 10 }}>
                 <h2>Delete trip confirmation</h2>
 
-                <div class="card">
-                    <div class="card-body">
-                        <h4 class="card-title"> {this.state.name} </h4>
-                        <p class="card-text"> {this.state.description} </p>
-                        <button onClick={this.onCancel} class="btn btn-default">
+                <div className="card">
+                    <div className="card-body">
+                        <h4 className="card-title"> {this.state.tractName} </h4>
+                        <p className="card-text"> {this.state.description} </p>
+                        <button onClick={this.onCancel} className="btn btn-default">
                             Cancel
                          </button>
-                        <button onClick={ this.onConfirmation} class="btn btn-danger">
+                        <button onClick={ this.onConfirmation} className="btn btn-danger">
                             Confirm
                          </button>
                     </div>
