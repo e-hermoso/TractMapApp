@@ -23,7 +23,7 @@ jobs:
         include-prerelease: true
 
     - name: Build with dotnet
-      run: echo %/PATH%
+      run: dotnet build --configuration Release
       working-directory: ./backend/SurveyingAndMaping
 
     - name: dotnet publish
