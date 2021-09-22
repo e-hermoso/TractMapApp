@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "m/kqwYZDQuooGuvf1fDwuP5Y1vV/mYF57cWtbqtn1h7eRgnfa+PHvFRf8gF95BzUkah/H2VOZwY2BOD5biZlmw==",
+  "dgSpecHash": "0LHiDshw28AzETcbd78Skno0SCU89XbOyi63t5IcnN/Vc37bluWaSSP0G6LiGu1w+KJ7u69o6VIkWPMAI5r3GQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\erich\\nova-waves\\erich-sample-prj\\TractMapApp\\backend\\SurveyingAndMaping\\SurveyingAndMaping.csproj",
+  "projectFilePath": "C:\\Users\\OCPWHermosoE\\source\\sample-NetCore-React\\TractMapApp\\backend\\SurveyingAndMaping\\SurveyingAndMaping.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
