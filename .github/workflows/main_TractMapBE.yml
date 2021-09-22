@@ -24,6 +24,8 @@ jobs:
 
     - name: Build with dotnet
       run: dotnet build --configuration Release
+      workingDirectory: backend/SurveyingAndMaping
+      displayName: "backend build"
 
     - name: dotnet publish
       run: dotnet publish -c Release -o ${{env.DOTNET_ROOT}}/myapp
