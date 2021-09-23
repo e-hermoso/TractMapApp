@@ -36,7 +36,7 @@ namespace SurveyingAndMaping
                 options.AddPolicy("CorsPolicy", builder =>
                 builder.AllowAnyMethod()
                 .AllowAnyHeader()
-                .WithOrigins("http://localhost:3000") // Defines CORS policy that allows our frontend app hosted in the http://localhost:3000 origin to access the backend.
+                .WithOrigins(Configuration["Frontend"]) // Defines CORS policy that allows our frontend app hosted in the http://localhost:3000 origin to access the backend.
                 .AllowCredentials()));
         }
 
