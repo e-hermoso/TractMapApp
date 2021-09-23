@@ -29,7 +29,6 @@ namespace SurveyingAndMaping
             services.AddControllers();
 
             services.AddTransient<ITractMapService, TractMapService>();
-            var sd = Configuration["Frontend"];
             // CORS(Cross-Origin Resourse Sharing) is a mechanism that uses HTTP headers to tell a browser to let
             // a web application run at certain origins (domains) so that it has permission to access certain resources on a server
             // at a different origin
@@ -37,7 +36,7 @@ namespace SurveyingAndMaping
                 options.AddPolicy("CorsPolicy", builder =>
                 builder.AllowAnyMethod()
                 .AllowAnyHeader()
-                .WithOrigins(Configuration["Frontend"]) // Defines CORS policy that allows our frontend app hosted in the http://localhost:3000 origin to access the backend.
+                .WithOrigins("http://localhost:3000") // Defines CORS policy that allows our frontend app hosted in the http://localhost:3000 origin to access the backend.
                 .AllowCredentials()));
         }
 
