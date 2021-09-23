@@ -29,7 +29,7 @@ namespace SurveyingAndMaping
             services.AddControllers();
 
             services.AddTransient<ITractMapService, TractMapService>();
-
+            var sd = Configuration["Frontend"];
             // CORS(Cross-Origin Resourse Sharing) is a mechanism that uses HTTP headers to tell a browser to let
             // a web application run at certain origins (domains) so that it has permission to access certain resources on a server
             // at a different origin
