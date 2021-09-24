@@ -53,7 +53,7 @@ export class CreateNewTractMapComponent extends Component {
             dateCompleted: this.state.dateCompleted
         }
 
-        axios.post("api/TractMaps/AddTractMap", tractmapObj).then(result => {
+        axios.post("https://tractmapbe.azurewebsites.net/api/TractMaps/AddTractMap", tractmapObj).then(result => {
             history.push('/NavTractMap')
         })
     }

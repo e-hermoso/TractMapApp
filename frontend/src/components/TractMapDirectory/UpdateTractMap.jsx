@@ -23,7 +23,7 @@ export class UpdateTractMapComponent extends Component {
 
     componentDidMount() {
         const { id } = this.props.match.params;
-        axios.get("api/TractMaps/SingleTractMap/" + id).then(tract => {
+        axios.get("https://tractmapbe.azurewebsites.net/api/TractMaps/SingleTractMap/" + id).then(tract => {
             const response = tract.data;
 
             this.setState({
@@ -72,7 +72,7 @@ export class UpdateTractMapComponent extends Component {
             dateCompleted: this.state.dateCompleted ? new Date(this.state.dateCompleted).toISOString() : null
         }
 
-        axios.put("api/TractMaps/UpdateTractMap/" + id, tractmapObj).then(result => {
+        axios.put("https://tractmapbe.azurewebsites.net/api/TractMaps/UpdateTractMap/" + id, tractmapObj).then(result => {
             history.push('/NavTractMap')
         })
     }
